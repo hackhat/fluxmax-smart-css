@@ -63,6 +63,9 @@ Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you canclick on th
 
 ## How it does
 
+![dependencies](./docs/animation.gif)
+
+
 In this example we will use these stores:
 
  - User;
