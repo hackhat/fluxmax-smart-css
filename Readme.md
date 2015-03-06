@@ -6,9 +6,24 @@ An example using fluxmax and smart-css.
 
 ## Setup
 
-Install deps:
+Install gulp globally `npm install -g gulp`.
+Then follow one of the paths (with npm or with git clone) below.
 
-    npm install
+
+### With npm
+
+Install with this command `npm install fluxmax-smart-css`. It will install in the `node_modules` folder. 
+
+
+### With git clone
+
+First clone this project, then cd into it and run: `npm install`
+
+
+
+## Run
+
+Cd into the `fluxmax-smart-css` folder (with npm will be `node_modules/fluxmax-smart-css`).
 
 Then run it with gulp:
 
