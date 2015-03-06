@@ -4,6 +4,7 @@ var path              = require('path');
 var WebpackDevServer  = require("webpack-dev-server");
 var webpack           = require('webpack')
 var gutil             = require('gutil')
+var del               = require('del');
 
 
 
@@ -66,6 +67,8 @@ gulp.task("webpack-dev-server", function(callback){
 });
 
 gulp.task("build", function(callback){
+    console.log(absPath('./dist/**'))
+    del(absPath('./dist/**'));
     webpack(config, function(err, stats) {
         if(err) throw new gutil.PluginError("webpack:build", err);
         gutil.log("[webpack:build]", stats.toString({
