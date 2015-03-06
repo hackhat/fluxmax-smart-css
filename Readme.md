@@ -20,12 +20,12 @@ Install gulp globally `npm install -g gulp`.
 Then follow one of the paths (with npm or with git clone) below.
 
 
-### With npm
+**With npm:**
 
 Install with this command `npm install fluxmax-smart-css`. It will install in the `node_modules` folder. 
 
 
-### With git clone
+**With git clone:**
 
 First clone this project, then cd into it and run: `npm install`
 
@@ -43,7 +43,9 @@ Run it with gulp:
 
 Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on this)
 
-**What to do now?**
+
+
+## What to do now?
 
  - Click on add task to add tasks;
  - Insert the threshold of points for that task to auto complete;
@@ -54,7 +56,9 @@ Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on t
  - Watch how the tasks gets auto completed when the threshold is hit;
  - Open up the console and check how exactly the app communicates internally;
 
-## What it does
+
+
+## What it does?
 
 **Rules:**
  - When a task is added the user gets 1 point;
@@ -73,7 +77,7 @@ Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on t
 
 
 
-## How it does
+## How it does?
 
 
 In this example we will use these stores:
@@ -112,11 +116,12 @@ We can also see the dependencies in this way too:
 Notice how you get a some statistics about your application internal links.
 
 
-#### Entities view
+### Entities view
 
 ![entities](./docs/entities.jpg)
 
 Above you can see what each entity dispatches. You can notice that the `store.task` emits these events `added, completed, uncompleted` easily and without any need for documentation. Is real time and is correct.
+
 
 
 ## UI (User Interface)
