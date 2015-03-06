@@ -1,4 +1,5 @@
 ![dependencies](./docs/animation.gif)
+[See the **gif** above.]
 
 An example using fluxmax and smart-css.
 
