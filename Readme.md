@@ -1,4 +1,4 @@
-An example using fluxmax and smart-css.
+An example using fluxmax and smart-css, see **[live example](https://cdn.rawgit.com/hackhat/fluxmax-smart-css/v0.0.1/dist/index.html)**.
 
 ## Final product gif
 
