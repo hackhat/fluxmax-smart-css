@@ -17,6 +17,11 @@ var E = Actions;
 E.meta = {
     id: 'actions',
 
+    /**
+     * This class is pretty static, the only thing you really need to care about is the following
+     * lines which defines your app's actions.
+     * Congratulations, you read all the essentials parts of the fluxmax system and you are ready to go!
+     */
     changeTypes: [
         'ui.tasks.addTask',
         'ui.tasks.completeTask',

@@ -2,7 +2,7 @@ var React     = require('react');
 var Fluxmax   = require('fluxmax');
 var SmartCSS  = require('smart-css');
 var Actions   = require('./Actions');
-var RootUI    = require('./ui/index');
+var RootUI    = require('./ui/Root');
 var TaskStore = require('./stores/TaskStore');
 var UserStore = require('./stores/UserStore');
 

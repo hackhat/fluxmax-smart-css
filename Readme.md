@@ -14,7 +14,11 @@ An example using [fluxmax](https://github.com/hackhat/fluxmax) and [smart-css](h
 
 ## How to read the source code?
 
-Start [here](/src/index.js). This is the first file loaded and follow the comments from there.
+ - Start [here](./src/index.js). This is the first file loaded in the app and follow the comments from there;
+ - Read about [stores](./src/stores/Readme.md);
+ - Read about [views](./src/ui/Readme.md);
+
+*You don't understand something? Open an issue.*
 
 
 

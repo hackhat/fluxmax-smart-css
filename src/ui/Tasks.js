@@ -7,10 +7,15 @@ var Task     = React.createFactory(require('./Task'));
 
 
 
+// This creates a new css context in the app.
 var css = new SmartCSS();
 
 
 
+// All the css added to this instance is local to this component and
+// doesn't mix with other classes outside this component. For example you
+// can have another component somewhere in your app with the class name
+// `root` and it will not interfere with this `root` class.
 css.setClass('root', {
 })
 
@@ -35,7 +40,12 @@ css.setClass('button', {
 
 
 
-
+// Here happens the real wiring with the fluxmax system. In this case we
+// tell the singleton `App` that this view is named `ui.tasks` and we are interested
+// in all (because of the `'*'`) the `batch` events from the `store.task` entity. When a
+// batch change happens then call the `__onChange` method on this view.
+// Read the 2nd part of the setup with fluxmax down in the methods `componentDidMount`
+// and `componentWillUnmount`.
 var displayName = 'ui.tasks';
 var listen = App.listen(displayName, [
     ['batch', 'store.task', '*', '__onChange']
@@ -74,18 +84,32 @@ module.exports = React.createClass({
 
 
 
+    /**
+     * This is the 2nd part of the fluxmax setup for the user interface. Here we just
+     * start to listen on the events of the app. Read the `componentWillUnmount` method now.
+     * Notice that we are using the instance `app` and **not** the singleton one (`App`).
+     */
     componentDidMount: function(){
         listen.start(this.props.context.app, this);
     },
 
 
 
+    /**
+     * Here we just end to listen to the events of the application.
+     */
     componentWillUnmount: function(){
         listen.end(this.props.context.app, this);
     },
 
 
 
+    /**
+     * This is the method we wired up before. Look up at `['batch', 'store.task', '*', '__onChange']`.
+     * So this method will be called when the task store changes. Not immediately, but on the next animation
+     * frame. This means that multiple events will be squeezed into just one event.
+     * When the change happens we just update the view with the react's method `forceUpdate`.
+     */
     __onChange: function(){
         this.forceUpdate();
     },
@@ -105,13 +129,30 @@ module.exports = React.createClass({
 
 
 
+    /**
+     * This method is called when a task is complete.
+     */
     __onTaskComplete: function(taskId){
         this.props.context.actions[displayName + '.completeTask'](taskId);
     },
 
 
 
+    /**
+     * This method is called when a task moves from complete to incomplete. We call
+     * this uncomplete (is it right? don't know but even so doesn't sound good!)
+     * Look below in the render method to understand how we wired this up. If you use
+     * react.js already this is pretty standard.
+     */
     __onTaskUncomplete: function(taskId){
+        // First read the comments in the render method and then return here!
+        //
+        // Continuing here after you read the render's comments:
+        // Here we call the action named `displayName + '.uncompleteTask'` which is
+        // `ui.tasks.uncompleteTask`.
+        // This just injects an event into the fluxmax system. This event will trigger
+        // several other events. Let's take a look into the Actions file. You can find it
+        // in `src/Actions.js`.
         this.props.context.actions[displayName + '.uncompleteTask'](taskId);
     },
 
@@ -122,13 +163,15 @@ module.exports = React.createClass({
             className: css.getClass('root')
         },
             React.DOM.button({
-                className: css.getClass('button'),
-                onClick: this.__onAddTaskButtonClicked,
+                className : css.getClass('button'),
+                onClick   : this.__onAddTaskButtonClicked,
             }, 'Add task'),
             this.props.context.stores.task.getAll().map(function(task){
                 return new Task({
                     key          : task._id,
                     task         : task,
+                    // Here we wire up this Task to the methods above
+                    // `__onTaskComplete` and `__onTaskUncomplete`.
                     onComplete   : this.__onTaskComplete,
                     onUncomplete : this.__onTaskUncomplete,
                 });

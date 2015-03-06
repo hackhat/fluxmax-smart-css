@@ -7,6 +7,7 @@ var User     = React.createFactory(require('./User'));
 
 
 
+
 var css = new SmartCSS();
 
 
@@ -34,6 +35,8 @@ css.setClass('app', {
 
 
 
+// Nothing yet interesting here, there is no need to listen to any
+// events. Look at the Tasks and User views, they contain more `action`.
 var displayName = 'ui.root';
 var listen = App.listen(displayName, [
 ]);
@@ -76,6 +79,9 @@ module.exports = React.createClass({
             React.DOM.div({
                 className: css.getClass('app')
             },
+                // Here we pass down our children the context of the app. There is a better way to
+                // do, but I don't have time to figure out right now and it might confuse you even more.
+                // There are a lot of new things for you.
                 new User({
                     context: this.props.context
                 }),
