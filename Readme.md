@@ -1,12 +1,29 @@
 # Readme example
 
-This is a simple example about Fluxmax and how to use it.
+An example using fluxmax and smart-css.
 
 
 
-## Stores
+## What it does
 
-To take full advantage of this library we need to use multiple stores which depends on themselves.
+**Rules:**
+ - When a task is added the user gets 1 point;
+ - When a task is done manually or automatically the user gets a random number of points;
+ - Each task has a threshold which defines the minimum of points the user needs to have to complete automatically; When this threshold is reached the task auto completes.
+ - When a task passes from completed to not complete the user lose the points;
+
+**Flow:**
+ - User adds a new task which auto completes when the user has 2 points;
+ - On adding a task the user receives 1 point;
+ - User adds another task which adds 1 point and auto completes when the user has 5 points.
+   - Now the user has a total of 2 points;
+   - The first task is done.
+   - When the first task is done the user receives 10 points;
+   - This will also complete the 2nd task because the user now has 12 points;
+
+
+
+## How it does
 
 In this example we will use these stores:
 
@@ -29,16 +46,16 @@ This store will also dispatch the event `pointsChanged`.
 
 
 
-## Views
+## UI (User Interface)
 
 There are 2 views, one which contains the user's points and another which contains the tasks.
 
 
-### User view
+### User UI
 
-The user view will listen to the events `pointsChanged` on the entity `store.user`.
+The user UI will listen to the events `pointsChanged` on the entity `store.user`.
 
 
-### Tasks view
+### Tasks UI
 
-The tasks view will listen to the events `added` and `done` on the entity `store.task`.
+The tasks UI will listen to the events `added` and `done` on the entity `store.task`.
