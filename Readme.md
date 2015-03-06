@@ -23,7 +23,7 @@ First clone this project, then cd into it and run: `npm install`
 
 ## Run
 
-Cd into the `fluxmax-smart-css` folder (with npm will be `node_modules/fluxmax-smart-css`).
+Cd into the `fluxmax-smart-css` folder (with npm this will be `node_modules/fluxmax-smart-css`).
 
 Then run it with gulp:
 
