@@ -2,8 +2,9 @@ An example using fluxmax and smart-css.
 
 ## Final product gif
 
-<div style="text-align:center"><img src ="./docs/animation2.gif" /></div>
-
+<p align="center">
+  <img src ="./docs/animation2.gif" />
+</p>
 
 
 ## Technical gif
