@@ -4,7 +4,7 @@ var App = require('fluxmax').App;
 
 
 
-
+// #fluxmax-tag
 var Actions = function(app){
     this.__app = app;
 };

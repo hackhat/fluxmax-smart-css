@@ -18,6 +18,7 @@ var TaskStore = function(options){
     /////////////////////////////
     // This is very important  //
     /////////////////////////////
+    // #fluxmax-tag
     // You really need to set the store's class in the instance
     // in this variable. This is needed by the fluxmax system to
     // setup all the wiring of your app.
@@ -32,6 +33,7 @@ var TaskStore = function(options){
 ///////////////////
 // Fluxmax setup //
 ///////////////////
+// #fluxmax-tag
 // Here is another essential part of your store. This describes your store's
 // entity, such as it's name, which events dispatches and to which events it
 // listens to. Read the comments below:

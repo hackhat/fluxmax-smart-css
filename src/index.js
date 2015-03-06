@@ -13,6 +13,7 @@ var UserStore = require('./stores/UserStore');
 ////////////////////////////
 // Stores and app config. //
 ////////////////////////////
+// #fluxmax-tag
 var App     = Fluxmax.App;
 // Creates a new app instance. Notice that somewhere we use the `App` and in
 // other places we use `app`. The `App` is the singleton which is used for the
@@ -78,6 +79,7 @@ SmartCSS.injectStyles();
 ///////////////
 // Debug app //
 ///////////////
+// #fluxmax-tag
 // Notice that we are calling these methods on the static `App`.
 // These methods will write to your console important data such as
 // the dependencies of the app. This will also check whenever your app
@@ -89,6 +91,7 @@ App.renderDependencies();
 /////////////////
 // Batch phase //
 /////////////////
+// #fluxmax-tag
 // Here is when the batch phase is invoked, this is manually done
 // on each frame. When the `app.emitBatchChanges()` method is called
 // all the views are updated with the data from stores.

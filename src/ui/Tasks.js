@@ -40,6 +40,7 @@ css.setClass('button', {
 
 
 
+// #fluxmax-tag
 // Here happens the real wiring with the fluxmax system. In this case we
 // tell the singleton `App` that this view is named `ui.tasks` and we are interested
 // in all (because of the `'*'`) the `batch` events from the `store.task` entity. When a
@@ -85,6 +86,7 @@ module.exports = React.createClass({
 
 
     /**
+     * #fluxmax-tag
      * This is the 2nd part of the fluxmax setup for the user interface. Here we just
      * start to listen on the events of the app. Read the `componentWillUnmount` method now.
      * Notice that we are using the instance `app` and **not** the singleton one (`App`).
@@ -96,6 +98,7 @@ module.exports = React.createClass({
 
 
     /**
+     * #fluxmax-tag
      * Here we just end to listen to the events of the application.
      */
     componentWillUnmount: function(){
