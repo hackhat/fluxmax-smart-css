@@ -4,6 +4,29 @@ An example using fluxmax and smart-css.
 
 
 
+## Setup
+
+Install deps:
+
+    npm install
+
+Then run it with gulp:
+
+    gulp
+
+Then go to: http://localhost:8080/
+
+**What to do now?**
+
+ - Click on add task to add tasks;
+ - Insert the threshold of points for that task to auto complete;
+ - Notice the task is not yet done and the number of points it has (at bottom);
+ - Click on a not complete task to complete;
+ - Click on a complete task to make it non complete;
+ - Watch the user's points grow;
+ - Watch how the tasks gets auto completed when the threshold is hit;
+ - Open up the console and check how exactly the app communicates internally;
+
 ## What it does
 
 **Rules:**
