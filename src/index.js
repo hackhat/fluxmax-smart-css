@@ -54,6 +54,7 @@ SmartCSS.injectStyles();
 
 // Debug app
 App.checkDependencies(); // On the static App.
+App.renderDependencies();
 var requestAnimationFrame = require('requestanimationframe');
 var scheduleNextRAF = function(){
     requestAnimationFrame(function(){

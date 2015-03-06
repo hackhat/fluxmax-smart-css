@@ -37,7 +37,7 @@ Cd into the `fluxmax-smart-css` folder (with npm this will be `node_modules/flux
 Run it with gulp:
 
     gulp
-    
+
 ![this is how it should look](./docs/startup.jpg)
 
 Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on this)
@@ -97,29 +97,31 @@ The first line says the `task` store listens on the entity `actions` on the even
 
 The last line says the the `ui.user` entity, which is the view of the user which contains the points, listens on `*` events (this means that listen to all the events) on the `user` store. Notice that at the end now says `[batch]`, this means that the view is listening on the `batch phase`.
 
-### Task store
 
-The task store dispatches the events `added` and `done`. All the events will be dispatched
-from the store, which has an entity id equal to `store.task`.
+#### Another view
+
+We can also see the dependencies in this way too:
+
+**Dependencies each:**
+![dependencies each](./docs/dependencies each.jpg)
+
+**Dependencies batch:**
+![dependencies batch](./docs/dependencies batch.jpg)
+
+Notice how you get a some statistics about your application internal links.
 
 
-### User store
+#### Entities view
 
-The user store listens to the events `added` and `done` from the entity `store.task`.
-This store will also dispatch the event `pointsChanged`.
+![entities](./docs/entities.jpg)
 
+Above you can see what each entity dispatches. You can notice that the `store.task` emits these events `added, completed, uncompleted` easily and without any need for documentation. Is real time and is correct.
 
 
 ## UI (User Interface)
 
-There are 2 views, one which contains the user's points and another which contains the tasks.
+![dependencies batch](./docs/dependencies batch.jpg)
+By looking at the dependencies batch above you can see that we have 2 basic views which listen to the `batch` phase of the events on the stores. 
 
-
-### User UI
-
-The user UI will listen to the events `pointsChanged` on the entity `store.user`.
-
-
-### Tasks UI
-
-The tasks UI will listen to the events `added` and `done` on the entity `store.task`.
+ - ui.tasks: "store.task(*)": The `ui.tasks` view listens to all events of the `task` store;
+ - ui.user: "store.user(*)": The `ui.user` view listens to all the events of the `user` store;
