@@ -17,5 +17,5 @@ The BaseStore inherits from a special class from the fluxmax system. This will a
 After you understood how to create the BaseStore (you can even copy paste it in your app) proceed to create some stores. 
 Here we create stores that inherit from the BaseStore. In this example we have 2 stores (open them in this order because the TaskStore contains important comments that UserStore does not):
 
- - [TaskStore](./TaskStore);
- - [UserStore](./UserStore);
+ - [TaskStore](./TaskStore.js);
+ - [UserStore](./UserStore.js);

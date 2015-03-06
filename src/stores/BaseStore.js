@@ -15,8 +15,10 @@ var BaseStore = function(){
 
 
 
+// #fluxmax
 // Here we extend the BaseStore from the EventEmitter and the FluxmaxStoreMixin.
-// The EventEmitter allows use to emit changes, like in node.js.
+// The EventEmitter allows use to emit changes, like in node.js. You will not use
+// `emit` directly in your stores.
 _.extend(BaseStore.prototype, EventEmitter.prototype, FluxmaxStoreMixin, {
 
 });

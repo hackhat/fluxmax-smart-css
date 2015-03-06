@@ -14,6 +14,8 @@ An example using [fluxmax](https://github.com/hackhat/fluxmax) and [smart-css](h
 
 ## How to read the source code?
 
+Across the project there will be some hashtags that marks essential parts of fluxmax. You can then search them in github. Search for `#fluxmax`.
+
  - Start [here](./src/index.js). This is the first file loaded in the app and follow the comments from there;
  - Read about [stores](./src/stores/Readme.md);
  - Read about [views](./src/ui/Readme.md);
