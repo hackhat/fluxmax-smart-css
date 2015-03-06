@@ -37,6 +37,8 @@ Cd into the `fluxmax-smart-css` folder (with npm this will be `node_modules/flux
 Run it with gulp:
 
     gulp
+    
+![this is how it should look](./docs/startup.jpg)
 
 Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on this)
 
