@@ -125,3 +125,9 @@ By looking at the dependencies batch above you can see that we have 2 basic view
 
  - ui.tasks: "store.task(*)": The `ui.tasks` view listens to all events of the `task` store;
  - ui.user: "store.user(*)": The `ui.user` view listens to all the events of the `user` store;
+
+
+
+## Conclusion
+
+It's easy to build complex, self documented and maintainable projects by using the fluxmax architecture approach.
