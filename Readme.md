@@ -38,7 +38,7 @@ Run it with gulp:
 
     gulp
 
-Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you canclick on this)
+Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on this)
 
 **What to do now?**
 
