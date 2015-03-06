@@ -1,7 +1,14 @@
-![dependencies](./docs/animation.gif)
-[See the **gif** above.]
-
 An example using fluxmax and smart-css.
+
+## Final product gif
+
+<div style="text-align:center"><img src ="./docs/animation2.gif" /></div>
+
+
+
+## Technical gif
+
+![animation](./docs/animation.gif)
 
 
 
