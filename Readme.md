@@ -1,17 +1,21 @@
 An example using [fluxmax](https://github.com/hackhat/fluxmax) and [smart-css](https://github.com/hackhat/smart-css), see **[live example](https://cdn.rawgit.com/hackhat/fluxmax-smart-css/v0.0.1/dist/index.html)** (with source maps).
 
+
+
 ## Final product gif
 
 <p align="center">
   <img src ="./docs/animation2.gif" />
 </p>
 
+[Technical slides](http://slides.com/hackhat/fluxmax-smart-css);
 
-## Technical gif
 
-![animation](./docs/animation.gif)
 
-[See the slides here](http://slides.com/hackhat/fluxmax-smart-css)
+## How to read the source code?
+
+Start [here](/src/index.js). This is the first file loaded and follow the comments from there.
+
 
 
 ## Setup

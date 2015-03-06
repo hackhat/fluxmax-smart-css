@@ -20,11 +20,9 @@ var UserStore = function(options){
 
 
 
-var E = UserStore; // "E" from "Entity".
+var E = UserStore;
 E.meta = {
-    // Unique id of this entity.
     id: 'store.user',
-    // What events this entity dispatches.
     changeTypes: [
         /**
          * @event pointsChanged
@@ -35,10 +33,9 @@ E.meta = {
          */
         'pointsChanged',
     ],
-    // To what events this entity listens to.
     listeners: [
-        ['each', 'store.task', 'added', '__onTaskAdded'],
-        ['each', 'store.task', 'completed', '__onTaskCompleted'],
+        ['each', 'store.task', 'added'     , '__onTaskAdded'       ],
+        ['each', 'store.task', 'completed' , '__onTaskCompleted'   ],
         ['each', 'store.task', 'uncompleted', '__onTaskUncompleted'],
     ]
 }
