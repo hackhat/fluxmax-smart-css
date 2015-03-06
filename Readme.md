@@ -25,11 +25,11 @@ First clone this project, then cd into it and run: `npm install`
 
 Cd into the `fluxmax-smart-css` folder (with npm this will be `node_modules/fluxmax-smart-css`).
 
-Then run it with gulp:
+Run it with gulp:
 
     gulp
 
-Then go to: http://localhost:8080/
+Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you canclick on this)
 
 **What to do now?**
 
@@ -68,8 +68,22 @@ In this example we will use these stores:
  - User;
  - Task;
 
-When a new task is added the user gain 1 point, when is done gains 5 points.
+When a new task is added the user gain 1 point, when is done gains a random number of points.
 
+
+### Dependencies
+
+Fluxmax makes very easy to see how your app is wired internally, just open the console and you will see all the dependencies:
+
+![dependencies](./docs/dependencies.jpg)
+
+> Dependency defined in "store.task" on "actions" at type "ui.tasks.addTask" is valid. [each]
+
+The first line says the `task` store listens on the entity `actions` on the event `ui.tasks.addTask`. The entity `actions` is used from the view/UI part of the app. The `[each]` part at the end tells that is listening on the `each phase`.
+
+> Dependency defined in "ui.user" on "store.user" at type "*" is valid. [batch]
+
+The last line says the the `ui.user` entity, which is the view of the user which contains the points, listens on `*` events (this means that listen to all the events) on the `user` store. Notice that at the end now says `[batch]`, this means that the view is listening on the `batch phase`.
 
 ### Task store
 
