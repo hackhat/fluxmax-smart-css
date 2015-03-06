@@ -10,7 +10,8 @@ An example using fluxmax and smart-css.
 ## Technical gif
 
 ![animation](./docs/animation.gif)
-<iframe src="//slides.com/hackhat/deck/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+[See the slides here](http://slides.com/hackhat/fluxmax-smart-css)
 
 
 ## Setup
