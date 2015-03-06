@@ -19,3 +19,5 @@ Here we create stores that inherit from the BaseStore. In this example we have 2
 
  - [TaskStore](./TaskStore.js);
  - [UserStore](./UserStore.js);
+
+Now proceed to read the UI. Go to [UI](../ui/Readme.md).

@@ -92,3 +92,4 @@ _.extend(UserStore.prototype, BaseStore.prototype, {
 
 
 module.exports = UserStore;
+// Now go back to the ./src/stores/Readme.md to continue the read.

@@ -21,7 +21,8 @@ var TaskStore = function(options){
     // #fluxmax-tag
     // You really need to set the store's class in the instance
     // in this variable. This is needed by the fluxmax system to
-    // setup all the wiring of your app.
+    // setup all the wiring of your app. Notice that is not the instance,
+    // is the Class.
     this.Class = TaskStore;
     this.__tasks = [];
     this.__taskId = 0;
@@ -36,7 +37,7 @@ var TaskStore = function(options){
 // #fluxmax-tag
 // Here is another essential part of your store. This describes your store's
 // entity, such as it's name, which events dispatches and to which events it
-// listens to. Read the comments below:
+// listens to. We call it entity's metadata. Read the comments below:
 var E = TaskStore; // "E" from "Entity".
 E.meta = {
     // Unique id of this entity. Is a good practice to name stores with the `store.`
@@ -45,6 +46,8 @@ E.meta = {
     id: 'store.task',
     // What events this entity dispatches. These are the events that your store emits
     // to the app. Other views and stores might listen to them.
+    // You can even document the data it passes. Later this data will use a schema to be checked
+    // against.
     changeTypes: [
         'added',
         'completed',
@@ -175,3 +178,4 @@ _.extend(TaskStore.prototype, BaseStore.prototype, {
 
 
 module.exports = TaskStore;
+// Now go back to the ./src/stores/Readme.md to continue the read.

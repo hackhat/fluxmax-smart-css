@@ -19,6 +19,7 @@ Across the project there will be some hashtags that marks essential parts of flu
  - Start [here](./src/index.js). This is the first file loaded in the app and follow the comments from there;
  - Read about [stores](./src/stores/Readme.md);
  - Read about [views](./src/ui/Readme.md);
+ - Read about [actions](./src/Actions.js);
 
 *You don't understand something? Open an issue.*
 
@@ -64,7 +65,7 @@ Go to: [http://localhost:8080/](http://localhost:8080/) (yes, you can click on t
  - Click on a complete task to make it non complete;
  - Watch the user's points grow;
  - Watch how the tasks gets auto completed when the threshold is hit;
- - Open up the console and check how exactly the app communicates internally;
+ - Open up the console, refresh and check how exactly the app communicates internally;
 
 
 
