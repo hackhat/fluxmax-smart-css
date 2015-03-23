@@ -1,7 +1,8 @@
-var React    = require('react');
-var SmartCSS = require('smart-css');
-var App      = require('fluxmax').App;
-var Task     = React.createFactory(require('./Task'));
+var React      = require('react');
+var SmartCSS   = require('smart-css');
+var App        = require('fluxmax').App;
+var Task       = React.createFactory(require('./Task'));
+var MainButton = require('./tottys/MainButton');
 
 
 
@@ -17,25 +18,6 @@ var css = new SmartCSS();
 // can have another component somewhere in your app with the class name
 // `root` and it will not interfere with this `root` class.
 css.setClass('root', {
-})
-
-
-
-css.setClass('button', {
-    width        : '320px',
-    padding      : '13px',
-    border       : '0',
-    background   : 'hsl(196, 100%, 50%)',
-    color        : 'white',
-    fontSize     : '26px',
-    outline      : 'none',
-    marginBottom : '1px',
-    boxSizing    : 'border-box',
-    cursor       : 'pointer',
-    transition   : 'all 0.2s',
-    ':hover': {
-    background   : 'hsl(196, 100%, 40%)',
-    }
 })
 
 
@@ -165,10 +147,10 @@ module.exports = React.createClass({
         return React.DOM.div({
             className: css.getClass('root')
         },
-            React.DOM.button({
-                className : css.getClass('button'),
-                onClick   : this.__onAddTaskButtonClicked,
-            }, 'Add task'),
+            new MainButton({
+                label   : 'Add task',
+                onClick : this.__onAddTaskButtonClicked,
+            }),
             this.props.context.stores.task.getAll().map(function(task){
                 return new Task({
                     key          : task._id,
