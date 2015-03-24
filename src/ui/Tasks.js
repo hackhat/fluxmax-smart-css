@@ -3,7 +3,7 @@ var SmartCSS    = require('smart-css');
 var App         = require('fluxmax').App;
 var Task        = React.createFactory(require('./Task'));
 var CustomTheme = require('./CustomTheme');
-var MainButton  = require('./tottys/MainButton')({
+var tottys      = require('./tottys/index')({
     theme: CustomTheme
 });
 
@@ -150,7 +150,7 @@ module.exports = React.createClass({
         return React.DOM.div({
             className: css.getClass('root')
         },
-            new MainButton({
+            new tottys.MainButton({
                 label   : 'Add task',
                 onClick : this.__onAddTaskButtonClicked,
             }),

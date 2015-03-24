@@ -7,8 +7,13 @@ var _         = require('lodash');
 
 
 var CustomTheme = _.merge({}, BaseTheme, {
-    // colors:
 });
+
+
+
+CustomTheme.colors.setColors({
+    main: 'hsl(116, 100%, 50%)'
+})
 
 
 

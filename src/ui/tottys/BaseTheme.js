@@ -1,14 +1,19 @@
-var tinycolor = require('tinycolor');
+var tinycolor  = require('tinycolor');
+var ColorStore = require('./ColorStore');
 
 
 
 
 
 var BaseTheme = {
-    colors: {
-        main: tinycolor('hsl(196, 100%, 50%)')
-    }
+    colors: new ColorStore()
 };
+
+
+
+BaseTheme.colors.setColors({
+    main: tinycolor('hsl(196, 100%, 50%)')
+})
 
 
 

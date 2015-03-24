@@ -23,7 +23,7 @@ module.exports = function(options){
         width        : '320px',
         padding      : '13px',
         border       : '0',
-        background   : theme.colors.main.toString(),
+        background   : theme.colors.getColor('main'),
         color        : 'white',
         fontSize     : '26px',
         outline      : 'none',
