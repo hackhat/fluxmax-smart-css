@@ -1,8 +1,11 @@
-var React      = require('react');
-var SmartCSS   = require('smart-css');
-var App        = require('fluxmax').App;
-var Task       = React.createFactory(require('./Task'));
-var MainButton = require('./tottys/MainButton');
+var React       = require('react');
+var SmartCSS    = require('smart-css');
+var App         = require('fluxmax').App;
+var Task        = React.createFactory(require('./Task'));
+var CustomTheme = require('./CustomTheme');
+var MainButton  = require('./tottys/MainButton')({
+    theme: CustomTheme
+});
 
 
 

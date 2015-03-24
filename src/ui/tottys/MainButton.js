@@ -6,47 +6,59 @@ var _        = require('lodash');
 
 
 
-var css = new SmartCSS();
+module.exports = function(options){
+    options = _.extend({
+        theme: void 0,
+    }, options);
+    var theme = options.theme;
+    if(!theme) throw new Error('No theme defined.');
 
 
 
-css.setClass('root', {
-    width        : '320px',
-    padding      : '13px',
-    border       : '0',
-    background   : 'hsl(196, 100%, 50%)',
-    color        : 'white',
-    fontSize     : '26px',
-    outline      : 'none',
-    marginBottom : '1px',
-    boxSizing    : 'border-box',
-    cursor       : 'pointer',
-    transition   : 'all 0.2s',
-    ':hover': {
-    background   : 'hsl(196, 100%, 40%)',
-    }
-})
+    var css = new SmartCSS();
+
+
+
+    css.setClass('root', {
+        width        : '320px',
+        padding      : '13px',
+        border       : '0',
+        background   : theme.colors.main.toString(),
+        color        : 'white',
+        fontSize     : '26px',
+        outline      : 'none',
+        marginBottom : '1px',
+        boxSizing    : 'border-box',
+        cursor       : 'pointer',
+        transition   : 'all 0.2s',
+        ':hover': {
+            background   : 'hsl(196, 100%, 40%)',
+        }
+    })
 
 
 
 
 
-module.exports = React.createClass({
+    var MainButton = React.createClass({
 
 
 
-    displayName: 'tottys.MainButton',
+        displayName: 'tottys.MainButton',
 
 
 
-    render: function(){
-        return React.DOM.button(_.extend({}, _.omit(this.props, 'className'), {
-            className: css.getClass('root'),
-        }), this.props.label)
-    }
+        render: function(){
+            return React.DOM.button(_.extend({}, _.omit(this.props, 'className'), {
+                className: css.getClass('root'),
+            }), this.props.label)
+        }
 
 
 
-});
+    });
 
 
+
+    return MainButton;
+}

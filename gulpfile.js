@@ -37,6 +37,7 @@ var config = {
         alias: {
             // fluxmax         : absPath('../../src/index'),
             'event-emitter' : 'wolfy87-eventemitter',
+            'tinycolor'     : 'tinycolor2',
         },
     },
     plugins: [
