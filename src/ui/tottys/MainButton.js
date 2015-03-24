@@ -19,7 +19,7 @@ module.exports = function(options){
 
 
 
-    css.setClass('root', {
+    css.setClass('root', _.extend({
         width        : '320px',
         padding      : '13px',
         border       : '0',
@@ -32,9 +32,9 @@ module.exports = function(options){
         cursor       : 'pointer',
         transition   : 'all 0.2s',
         ':hover': {
-            background   : 'hsl(196, 100%, 40%)',
+            background   : theme.colors.getColor('main', 'lighten'),
         }
-    })
+    }))
 
 
 

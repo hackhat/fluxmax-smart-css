@@ -31,13 +31,27 @@ _.extend(ColorStore.prototype, {
     /**
      * Returns a certain color.
      * @param  {String} id [description]
-     * @param  {'tinycolor'|'string'} [as='string']
+     * @param  {'default'|'lighten'|'darken'} [variation='default'] This applies a standard change to the color.
+     * @param  {'string'|'tinycolor'} [as='string']
      * @return {tinycolor|String}
      */
-    getColor: function(id, as){
+    getColor: function(id, variation, as){
+        variation = variation || 'default';
         as = as || 'string';
         var color = this.__colors[id];
         if(!color) throw new Error('No color with id "' + id + '" found.');
+        if(variation === 'lighten'){
+            color.lighten(10);
+        }
+        else if(variation === 'darken'){
+            color.darken(10);
+        }
+        else if(variation === 'default'){
+
+        }
+        else{
+            throw new Error('Color variation "' + variation + '" not found.');
+        }
         if(as === 'string'){
             return color.toString();
         }
