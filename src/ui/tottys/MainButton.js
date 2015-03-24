@@ -23,18 +23,16 @@ module.exports = function(options){
         width        : '320px',
         padding      : '13px',
         border       : '0',
-        background   : theme.colors.getColor('main'),
-        color        : 'white',
-        fontSize     : '26px',
         outline      : 'none',
         marginBottom : '1px',
         boxSizing    : 'border-box',
         cursor       : 'pointer',
-        transition   : 'all 0.2s',
-        ':hover': {
-            background   : theme.colors.getColor('main', 'lighten'),
-        }
-    }))
+        transition   : theme.transition,
+        ':hover': _.extend({
+        }, theme.font.getStyle('big', theme.colors.getColor('main', 'lighten'))),
+        ':active': _.extend({
+        }, theme.font.getStyle('big', theme.colors.getColor('main', 'darken')))
+    }, theme.font.getStyle('big', theme.colors.getColor('main'))))
 
 
 

@@ -38,7 +38,7 @@ _.extend(ColorStore.prototype, {
     getColor: function(id, variation, as){
         variation = variation || 'default';
         as = as || 'string';
-        var color = this.__colors[id];
+        var color = tinycolor(this.__colors[id].toString());
         if(!color) throw new Error('No color with id "' + id + '" found.');
         if(variation === 'lighten'){
             color.lighten(10);
