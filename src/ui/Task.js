@@ -1,5 +1,5 @@
-var React    = require('react');
-var SmartCSS = require('smart-css');
+var React       = require('react');
+var SmartCSS    = require('smart-css');
 var CustomTheme = require('./CustomTheme');
 
 

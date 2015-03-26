@@ -3,7 +3,7 @@ var SmartCSS    = require('smart-css');
 var App         = require('fluxmax').App;
 var Task        = React.createFactory(require('./Task'));
 var CustomTheme = require('./CustomTheme');
-var tottys      = require('./tottys/index')({
+var tottys      = require('tottys-ui')({
     theme: CustomTheme
 });
 
