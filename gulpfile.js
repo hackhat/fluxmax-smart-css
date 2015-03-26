@@ -34,6 +34,7 @@ var config = {
         ]
     },
     resolve: {
+        root: path.join(__dirname, "node_modules"),
         alias: {
             // fluxmax         : absPath('../../src/index'),
             'event-emitter' : 'wolfy87-eventemitter',
