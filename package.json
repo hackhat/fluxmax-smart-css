@@ -22,10 +22,11 @@
   "author": "hackhat",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^3.3.1",
     "fluxmax": "0.0.2",
+    "lodash": "^3.3.1",
     "react": "^0.12.2",
     "requestanimationframe": "0.0.22",
+    "tinycolor2": "^1.1.2",
     "wolfy87-eventemitter": "^4.2.11"
   },
   "repository": {
