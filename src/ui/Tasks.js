@@ -20,7 +20,7 @@ var css = new SmartCSS();
 // doesn't mix with other classes outside this component. For example you
 // can have another component somewhere in your app with the class name
 // `root` and it will not interfere with this `root` class.
-css.setClass('root', {
+css.setClass('.root', {
 })
 
 

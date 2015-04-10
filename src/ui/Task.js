@@ -10,7 +10,7 @@ var css = new SmartCSS();
 
 
 
-css.setClass('root', {
+css.setClass('.root', {
     maxWidth     : '320px',
     lineHeight   : '25px',
     cursor       : 'pointer',
@@ -27,7 +27,7 @@ css.setClass('root', {
 
 
 
-css.setClass('completed', {
+css.setClass('.completed', {
     background   : 'hsl(139, 56%, 50%)',
     color        : 'hsl(0, 100%, 100%)',
     borderBottom : '1px solid hsl(0, 100%, 100%)',
@@ -38,7 +38,7 @@ css.setClass('completed', {
 
 
 
-css.setClass('warning', {
+css.setClass('.warning', {
     transition     : 'all 0.2s',
     color          : 'hsl(139, 56%, 75%)',
     borderTop      : '1px solid hsl(139, 56%, 75%)',
@@ -48,19 +48,19 @@ css.setClass('warning', {
     marginTop      : '5px',
     fontSize       : '12px',
 })
-css.setClass('warningHover', {
+css.setClass('.warning:hover', {
     color          : 'hsl(139, 56%, 55%)',
     borderTopColor : 'hsl(139, 56%, 55%)',
 })
 
 
 
-css.setClass('warningCompleted', {
+css.setClass('.warningCompleted', {
     transition     : 'all 0.2s',
     color          : 'hsl(139, 100%, 80%)',
     borderTopColor : 'hsl(139, 100%, 80%)',
 })
-css.setClass('warningCompletedHover', {
+css.setClass('.warningCompleted:hover', {
     color          : 'hsl(139, 100%, 95%)',
     borderTopColor : 'hsl(139, 100%, 95%)',
 })
@@ -138,15 +138,13 @@ module.exports = React.createClass({
             React.DOM.br(),
             !task.completed && !task.manual ? React.DOM.span({
                 className: css.getClasses({
-                    warning      : true,
-                    warningHover : this.state.hover,
+                    warning : true,
                 }),
             }, 'Automatically completed at: ' + task.minPoints + ' points.') : void 0,
             task.completed ? React.DOM.span({
                 className: css.getClasses({
-                    warning               : true,
-                    warningCompleted      : true,
-                    warningCompletedHover : this.state.hover,
+                    warning          : true,
+                    warningCompleted : true,
                 }),
             }, (task.manual ? 'Manually' : 'Automatically') + ' completed and earned ' + task.pointsOnComplete + ' points!') : void 0
         )

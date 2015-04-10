@@ -10,7 +10,7 @@ var css = new SmartCSS();
 
 
 
-css.setClass('root', {
+css.setClass('.root', {
     width        : '320px',
     padding      : '13px',
     border       : '0',

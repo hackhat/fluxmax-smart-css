@@ -12,7 +12,7 @@ var css = new SmartCSS();
 
 
 
-css.setClass('root', {
+css.setClass('.root', {
     backgroundImage : 'url(' + require('../iphone.jpg') + ')',
     width           : '366px',
     height          : '778px',
@@ -21,7 +21,7 @@ css.setClass('root', {
 
 
 
-css.setClass('app', {
+css.setClass('.app', {
     marginLeft : '25px',
     marginTop  : '126px',
     position   : 'absolute',
