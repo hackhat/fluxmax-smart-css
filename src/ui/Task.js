@@ -42,14 +42,14 @@ css.setClass('.completed:hover', {
 
 
 css.setClass('.warning', {
-    transition     : 'all 0.2s',
-    color          : positiveC().lighten(15),
-    borderTop      : ['1px solid', positiveC().lighten(15)],
-    display        : 'inline-block',
-    width          : 'calc(100% - 0px)',
-    paddingTop     : '5px',
-    marginTop      : '5px',
-    fontSize       : '12px',
+    transition : 'all 0.2s',
+    color      : positiveC().lighten(15),
+    borderTop  : ['1px solid', positiveC().lighten(15)],
+    display    : 'inline-block',
+    width      : '100%',
+    paddingTop : '5px',
+    marginTop  : '5px',
+    fontSize   : '12px',
 })
 css.setClass('.warning:hover', {
     color          : positiveC().darken(5),
