@@ -1,6 +1,6 @@
-var React       = require('react');
-var SmartCSS    = require('smart-css');
-var CustomTheme = require('./CustomTheme');
+var React    = require('react');
+var SmartCSS = require('smart-css');
+var Theme    = require('./CustomTheme');
 
 
 
@@ -22,25 +22,25 @@ css.setClass('.root', {
     color        : 'hsl(0, 0%, 20%)',
 })
 css.setClass('.root:hover', {
-    background: 'hsl(139, 56%, 90%)',
+    background: Theme.colors.getColor('positive').lighten(30),
 });
 
 
 
 css.setClass('.completed', {
-    background   : 'hsl(139, 56%, 50%)',
-    color        : 'hsl(0, 100%, 100%)',
+    background   : Theme.colors.getColor('positive').darken(10),
+    color        : Theme.colors.getColor('positive').lighten(40),
     borderBottom : '1px solid hsl(0, 100%, 100%)',
 })
 css.setClass('.completed:hover', {
-    background: 'hsl(139, 56%, 60%)'
+    background: Theme.colors.getColor('positive')
 });
 
 
 
 css.setClass('.warning', {
     transition     : 'all 0.2s',
-    color          : 'hsl(139, 56%, 75%)',
+    color          : Theme.colors.getColor('positive').lighten(15),
     borderTop      : '1px solid hsl(139, 56%, 75%)',
     display        : 'inline-block',
     width          : 'calc(100% - 0px)',
@@ -49,20 +49,20 @@ css.setClass('.warning', {
     fontSize       : '12px',
 })
 css.setClass('.warning:hover', {
-    color          : 'hsl(139, 56%, 55%)',
-    borderTopColor : 'hsl(139, 56%, 55%)',
+    color          : Theme.colors.getColor('positive').darken(5),
+    borderTopColor : Theme.colors.getColor('positive').darken(5),
 })
 
 
 
 css.setClass('.warningCompleted', {
     transition     : 'all 0.2s',
-    color          : 'hsl(139, 100%, 80%)',
-    borderTopColor : 'hsl(139, 100%, 80%)',
+    color          : Theme.colors.getColor('positive').lighten(20),
+    borderTopColor : Theme.colors.getColor('positive').lighten(20),
 })
 css.setClass('.warningCompleted:hover', {
-    color          : 'hsl(139, 100%, 95%)',
-    borderTopColor : 'hsl(139, 100%, 95%)',
+    color          : Theme.colors.getColor('positive').lighten(35),
+    borderTopColor : Theme.colors.getColor('positive').lighten(35),
 })
 
 

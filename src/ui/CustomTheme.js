@@ -13,9 +13,7 @@ var CustomTheme = _.merge({}, BaseTheme, {
 
 CustomTheme.colors.setColors({
     main     : 'hsl(230, 78%, 54%)',
-    custom: {
-        positive : 'hsl(139, 56%, 60%)',
-    }
+    positive : tinycolor('hsl(139, 56%, 60%)'),
 })
 
 
