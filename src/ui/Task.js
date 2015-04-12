@@ -20,10 +20,10 @@ css.setClass('.root', {
     fontFamily   : 'sans-serif',
     transition   : 'all 0.2s',
     color        : 'hsl(0, 0%, 20%)',
-    ':hover': {
-        background: 'hsl(139, 56%, 90%)',
-    }
 })
+css.setClass('.root:hover', {
+    background: 'hsl(139, 56%, 90%)',
+});
 
 
 
@@ -31,10 +31,10 @@ css.setClass('.completed', {
     background   : 'hsl(139, 56%, 50%)',
     color        : 'hsl(0, 100%, 100%)',
     borderBottom : '1px solid hsl(0, 100%, 100%)',
-    ':hover': {
-        background: 'hsl(139, 56%, 60%)'
-    }
 })
+css.setClass('.completed:hover', {
+    background: 'hsl(139, 56%, 60%)'
+});
 
 
 
