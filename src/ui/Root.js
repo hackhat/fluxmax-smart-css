@@ -75,7 +75,6 @@ module.exports = React.createClass({
         return React.DOM.div({
             className: css.getClass('root')
         },
-
             React.DOM.div({
                 className: css.getClass('app')
             },

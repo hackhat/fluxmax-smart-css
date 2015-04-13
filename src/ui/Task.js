@@ -9,7 +9,7 @@ var positiveC = function(){
 
 
 
-var css = new SmartCSS();
+var css = new SmartCSS({name: 'Task'});
 
 
 
@@ -51,7 +51,7 @@ css.setClass('.warning', {
     marginTop  : '5px',
     fontSize   : '12px',
 })
-css.setClass('.warning:hover', {
+css.setClass('.root:hover .warning', {
     color          : positiveC().darken(5),
     borderTopColor : positiveC().darken(5),
 })
@@ -63,7 +63,7 @@ css.setClass('.warningCompleted', {
     color          : positiveC().lighten(20),
     borderTopColor : positiveC().lighten(20),
 })
-css.setClass('.warningCompleted:hover', {
+css.setClass('.root:hover .warningCompleted', {
     color          : positiveC().lighten(35),
     borderTopColor : positiveC().lighten(35),
 })
