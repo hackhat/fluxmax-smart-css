@@ -155,6 +155,8 @@ module.exports = React.createClass({
                 label   : 'Add task',
                 onClick : this.__onAddTaskButtonClicked,
             }),
+            new tottys.Toggle({
+            }),
             this.props.context.stores.task.getAll().map(function(task){
                 return new Task({
                     key          : task._id,
