@@ -108,6 +108,7 @@ module.exports = React.createClass({
         var taskTitle = _.shuffle(tasks)[0]; //prompt("Enter task title", _.shuffle(tasks)[0]);
         var currentPoints = this.props.context.stores.user.getPoints();
         var taskAfterPoints = parseInt(prompt("Autocomplete task at X points", currentPoints + 2));
+        if(isNaN(taskAfterPoints)) return;
         this.props.context.actions[displayName + '.addTask']({
             title            : taskTitle,
             minPoints        : taskAfterPoints,
